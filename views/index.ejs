@@ -14,15 +14,18 @@
     <form method="POST" action="/form">
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="email" name="email" value="<%= email %>">
+        <% if (ErroEmail) { %><br/><small style="color: red;"><%= ErroEmail %></small> <%  } %>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Nome</label>
-        <input type="text" class="form-control" id="nome" name="nome">
+        <input type="text" class="form-control" id="nome" name="nome" value="<%= nome %>">
+        <% if (ErrorNome) { %><br/><small style="color: red;"><%= ErrorNome %></small> <%  } %>
       </div>
       <div class="form-group">
           <label for="exampleInputPassword1">Pontos</label>
-          <input type="number" class="form-control" id="pontos" name="pontos">
+          <input type="number" class="form-control" id="pontos" name="pontos" value="<%= pontos %>">
+          <% if (ErroPontos) { %><br/><small style="color: red;"><%= ErroPontos %></small> <%  } %>
         </div>
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
